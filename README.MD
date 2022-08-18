@@ -1,6 +1,6 @@
-##Pokedex-Project
+## Pokedex-Project
 
-
+<img src='./img/Print.jpg'>
 
 # Tecnologias
 
@@ -14,4 +14,4 @@
 
 # Link do projeto
 
-- ttps://mellow-muffin-8f3aed.netlify.app/
+- https://mellow-muffin-8f3aed.netlify.app/
