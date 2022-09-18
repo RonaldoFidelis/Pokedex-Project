@@ -6,6 +6,13 @@ const pokemonGif = document.querySelector('.pokemon_gif');
 const form = document.querySelector('.form');
 const inputPokemon = document.querySelector('.input_search');
 
+//btn
+const btnNext = document.querySelector('.btn-next');
+const btnPrev = document.querySelector('.btn-prev');
+
+//Contador do btn 
+let add = 1;
+
 
 //Função para consumir a PokéAPI
 const fetchPokemon = async (pokemon) => {
@@ -41,13 +48,23 @@ const renderPokemon = async (pokemon) => {
     
 }
 
-form.addEventListener('submit',(event) =>{
+form.addEventListener('submit',(event) => {
     event.preventDefault();
     //Pegando o valor do input
     renderPokemon(inputPokemon.value.toLowerCase());
     // zera o campo
     inputPokemon.value = '';
     inputPokemon.focus();
+});
+
+btnNext.addEventListener('click', function (e) {
+   add += 1;
+   renderPokemon(add);
+});
+
+btnPrev.addEventListener('click', function (e) {
+   add -= 1;
+   renderPokemon(add);
 });
 
 renderPokemon('1');
